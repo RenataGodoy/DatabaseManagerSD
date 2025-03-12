@@ -1,0 +1,175 @@
+/* Resetando estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  /* Container principal que envolve os módulos */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 30px;
+  }
+  
+  /* Cabeçalho comum */
+  h2 {
+    color: #444;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para as mensagens de sucesso e erro */
+  .message {
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .message.success {
+    color: green;
+  }
+  
+  .message.error {
+    color: red;
+  }
+  
+  /* Estilo para os campos de entrada de texto, selects, etc. */
+  input[type="text"],
+  input[type="number"],
+  input[type="checkbox"],
+  select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #fff;
+  }
+  
+  /* Estilo para os botões */
+  button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Layout de inputs e selects de colunas */
+  .column-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .column-container input,
+  .column-container select {
+    width: 30%;
+  }
+  
+  .column-container label {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .column-container button {
+    margin-top: 10px;
+    width: 100%;
+    align-self: flex-start;
+  }
+  
+  /* Formulários para adicionar colunas e registros */
+  .form-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+  }
+  
+  .form-container input,
+  .form-container select {
+    width: 100%;
+  }
+  
+  .form-container button {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  /* Tabelas para exibição de registros */
+  .records-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .records-table th, .records-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .records-table th {
+    background-color: #f4f4f4;
+  }
+  
+  /* Estilos para selects de banco de dados e tabela */
+  select {
+    padding: 12px;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Layout responsivo */
+  @media (max-width: 768px) {
+    .form-container {
+      padding: 15px;
+    }
+  
+    .column-container input,
+    .column-container select {
+      width: 100%;
+    }
+  
+    .column-container button {
+      width: 100%;
+    }
+  
+    .container {
+      margin-top: 20px;
+    }
+  }
+  

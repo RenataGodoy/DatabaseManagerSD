@@ -1,33 +1,98 @@
+/* Resetando o estilo padrão do navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Layout Principal (com o Menu Lateral) */
 .App {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+/* Menu Lateral */
+nav {
+  width: 250px;
+  background-color: #282c34;
+  color: white;
+  padding-top: 20px;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10; /* Garante que o menu lateral fique acima do conteúdo */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+nav ul li {
+  margin: 15px 0;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px;
+  color: #fa83d6;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #f796f2;
+  color: white;
+}
+
+/* Estilo do Conteúdo Principal (onde o Título e o resto das páginas estarão) */
+.App-header {
+  margin-left: 250px; /* Deixa espaço para o menu lateral */
+  flex: 1;
+  display: flex;
+  justify-content: flex-start; /* Alinha o conteúdo ao topo */
+  flex-direction: column;
+  height: 100%;
+  padding: 20px;
+  overflow-y: auto; /* Caso o conteúdo da página ultrapasse a altura */
+}
+
+/* Título */
+.App h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 20px 0;
   text-align: center;
 }
 
+/* Logo (caso tenha) */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
+/* Animação da Logo */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
+/* Animação da Logo */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
