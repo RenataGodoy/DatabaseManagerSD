@@ -1,4 +1,3 @@
-/* Resetando o estilo padrão do navegador */
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +13,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Layout Principal (com o Menu Lateral) */
+/* Layout Principal */
 .App {
   display: flex;
   flex-direction: row;
@@ -22,7 +21,7 @@ body {
   width: 100%;
 }
 
-/* Menu Lateral */
+/* Meu Lateral */
 nav {
   width: 250px;
   background-color: #282c34;
@@ -32,7 +31,7 @@ nav {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 10; /* Garante que o menu lateral fique acima do conteúdo */
+  z-index: 10; 
 }
 
 nav ul {
@@ -59,19 +58,19 @@ nav ul li a:hover {
   color: white;
 }
 
-/* Estilo do Conteúdo Principal (onde o Título e o resto das páginas estarão) */
+
 .App-header {
-  margin-left: 250px; /* Deixa espaço para o menu lateral */
+  margin-left: 250px; 
   flex: 1;
   display: flex;
-  justify-content: flex-start; /* Alinha o conteúdo ao topo */
+  justify-content: flex-start; 
   flex-direction: column;
   height: 100%;
   padding: 20px;
-  overflow-y: auto; /* Caso o conteúdo da página ultrapasse a altura */
+  overflow-y: auto; 
 }
 
-/* Título */
+
 .App h1 {
   font-size: 2.5rem;
   color: #333;
@@ -79,25 +78,4 @@ nav ul li a:hover {
   text-align: center;
 }
 
-/* Logo (caso tenha) */
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-/* Animação da Logo */
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-/* Animação da Logo */
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
